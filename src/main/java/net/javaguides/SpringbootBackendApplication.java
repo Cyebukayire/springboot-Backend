@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import net.javaguides.model.User;
-import net.javaguides.repository.UserRepository;
+import net.javaguides.model.Student;
+import net.javaguides.repository.StudentRepository;
 
 @SpringBootApplication
 public class SpringbootBackendApplication implements CommandLineRunner{
@@ -16,16 +16,15 @@ public class SpringbootBackendApplication implements CommandLineRunner{
 	}
 	
 	@Autowired
-	private UserRepository userRepository;
+	private StudentRepository studentRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		this.userRepository.save(new User("Peace", "Hanson", "peace@gmail.com"));  
-		this.userRepository.save(new User("Kellia", "Umuhire", "kellia@gmail.com"));
-		this.userRepository.save(new User("Gisa", "Fadhili", "gisa@gmail.com"));
-		this.userRepository.save(new User("Sam", "Shallom", "sam@gmail.com"));
-
+		this.studentRepository.save(new Student("Peace", "A", "peace@gmail.com"));  
+		this.studentRepository.save(new Student("Kellia", "B", "kellia@gmail.com"));
+		this.studentRepository.save(new Student("Gisa", "B", "gisa@gmail.com"));
+		this.studentRepository.save(new Student("Sam", "C", "sam@gmail.com"));
 
 	}
 
