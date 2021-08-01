@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import net.javaguides.model.Student;
 import net.javaguides.repository.StudentRepository;
 
+
 @SpringBootApplication
 public class SpringbootBackendApplication implements CommandLineRunner{
 
@@ -27,5 +28,6 @@ public class SpringbootBackendApplication implements CommandLineRunner{
 		this.studentRepository.save(new Student("Sam", "C", "sam@gmail.com"));
 
 	}
+	
 
 }
