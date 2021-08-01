@@ -6,4 +6,5 @@ import net.javaguides.model.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Long>{
 
+	
 }

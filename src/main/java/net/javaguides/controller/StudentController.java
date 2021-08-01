@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import net.javaguides.model.Student;
 import net.javaguides.repository.StudentRepository;
 
+
 @CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("api/")
