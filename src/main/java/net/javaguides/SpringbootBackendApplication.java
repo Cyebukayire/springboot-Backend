@@ -1,5 +1,7 @@
 package net.javaguides;
 
+import java.util.Collections;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +15,11 @@ import net.javaguides.repository.StudentRepository;
 public class SpringbootBackendApplication implements CommandLineRunner{
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBackendApplication.class, args);
+		SpringApplication app = new SpringApplication(SpringbootBackendApplication.class);
+	     app.setDefaultProperties(
+	           Collections.singletonMap("server.port", "8090"));
+	     app.run(args);
+//		SpringApplication.run(SpringbootBackendApplication.class, args);
 	}
 	
 	@Autowired
